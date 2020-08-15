@@ -1,9 +1,9 @@
 vim9script
 
-" I don't like to reach for escape...
+# I don't like to reach for escape...
 inoremap fj <Esc>
 
-" General settings I want as defaults -------------------------
+# General settings I want as defaults -------------------------
 set nocompatible
 g:mapleader = "-"
 g:localmapleader = "\\"
@@ -18,16 +18,16 @@ set textwidth=0
 set noexpandtab
 setglobal fileencoding=utf8
 
-" some variables used in commands -----------------------------
+# some variables used in commands -----------------------------
 g:rwt_blog = '~/src/ghio_pages'
 
-" some global mappings ----------------------------------------
-" UPPERCASE the current word while in insert mode
+# some global mappings ----------------------------------------
+# UPPERCASE the current word while in insert mode
 inoremap <c-u> <esc>viwUwa
 nnoremap <leader>ev :edit $MYVIMRC<cr>
 
-" settings for blog posts... ----------------------------------
-" Easy access to blog post directories
+# settings for blog posts... ----------------------------------
+# Easy access to blog post directories
 cabbrev <expr> bd@ g:rwt_blog .. '/_drafts'
 cabbrev <expr> bp@ g:rwt_blog .. '\_posts\2020\2020'
 
