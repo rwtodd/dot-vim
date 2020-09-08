@@ -16,6 +16,8 @@ set relativenumber
 set encoding=utf8
 set textwidth=0
 set noexpandtab
+set softtabstop=0
+set shiftwidth=0
 setglobal fileencoding=utf8
 
 # some variables used in commands -----------------------------
@@ -43,6 +45,11 @@ augroup rwtBlogging
   autocmd FileType markdown :inoreabbrev <buffer> h3# <esc>i### <esc>a###<esc>3hi
   autocmd FileType markdown :inoreabbrev <buffer> h4# <esc>i#### <esc>a####<esc>4hi
   autocmd FileType markdown :inoreabbrev <buffer> sc# ```<cr>```<cr><esc>2kA
+augroup END
+
+augroup rwtScala
+  autocmd!
+  autocmd FileType scala :set autoindent
 augroup END
 
 syntax on
